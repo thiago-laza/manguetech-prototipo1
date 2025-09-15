@@ -1,0 +1,64 @@
+/* src/pages/Dashboard.css */
+.dashboard-container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+
+/* Container para os cartões usando CSS Grid */
+.dashboard-options {
+  display: grid;
+  /* Controla o tamanho e a quantidade de colunas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* Espaçamento entre os cartões */
+  max-width: 1000px; /* Limita a largura do container */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  justify-content: center; /* Centraliza o grid dentro do container */
+}
+
+/* Estilos para os cartões de opção */
+.option-card {
+  background-color: #1a1a2e;
+  padding: 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+  /* A largura do cartão é controlada pelo grid, mas podemos
+     adicionar um max-width para telas muito grandes */
+  max-width: 300px; 
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.option-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.option-card p {
+  color: #b0b0b0;
+}
+
+/* Media Queries para garantir a responsividade */
+@media (max-width: 768px) {
+  .dashboard-options {
+    grid-template-columns: 1fr; /* Em telas menores, os cartões ficam em uma única coluna */
+  }
+  .option-card {
+    max-width: 100%;
+  }
+}

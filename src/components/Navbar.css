@@ -1,0 +1,79 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #0d1632; /* Fundo azul escuro principal */
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo img {
+  height: 30px; /* Ajuste o tamanho da logo */
+  margin-right: 10px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #8a2be2; /* Cor de destaque ao passar o mouse */
+}
+
+/* Classes base para os botões de autenticação */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-auth-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1rem;
+  text-decoration: none; /* Remove o sublinhado do Link */
+  color: #ffffff;
+  display: inline-block; /* Garante que os estilos de padding funcionem corretamente */
+}
+
+.navbar-login {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.navbar-login:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-signup {
+  background-image: linear-gradient(to right, #8a2be2, #4b0082);
+  color: #ffffff;
+}
+
+.navbar-signup:hover {
+  background-image: linear-gradient(to right, #9933ff, #5c00a3);
+}

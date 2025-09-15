@@ -1,0 +1,107 @@
+/* src/components/HeroSection.css */
+.hero-container {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  /* Cor gradient da imagem */
+  background: linear-gradient(to right, #4c8fe0, #6c4fe0, #8c2fe0);
+  
+  /* Aplica o gradiente apenas ao texto e o deixa transparente */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #4c8fe0; /* Fallback para navegadores que não suportam */
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #c0c0c0; /* Cinza claro */
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #a0a0a0; /* Cinza um pouco mais escuro */
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.features-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Espaçamento entre os cartões */
+}
+
+.feature-card {
+  background-color: #1a1a2e; /* Fundo escuro para os cartões */
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1 1 250px; /* Garante que os cards se adaptem e tenham um tamanho base */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px; /* Altura mínima para os cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Efeito de levantar no hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* Títulos dos cartões em branco */
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #b0b0b0; /* Texto dos cartões em cinza claro */
+}
+
+/* Para o cartão único na linha de baixo (ocupando mais espaço) */
+.single-card {
+  flex-basis: 520px; /* Ocupa o espaço de dois cartões mais o gap */
+  max-width: 100%; /* Garante que não ultrapasse a largura do container */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .single-card {
+    flex-basis: 100%; /* Em telas pequenas, ocupa 100% da largura */
+  }
+  .features-cards {
+    flex-direction: column; /* Em telas muito pequenas, empilha os cards */
+    align-items: center;
+  }
+  .feature-card {
+    width: 90%; /* Ocupa a maior parte da largura */
+    flex: none; /* Desativa o flex-basis para que a largura funcione */
+  }
+}

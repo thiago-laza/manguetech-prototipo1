@@ -1,0 +1,17 @@
+/* src/index.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-rendering: optimizeLegibility; /* Melhor renderização da fonte */
+  background-color: #0d1632; /* Fundo azul escuro principal */
+  color: #ffffff; /* Cor de texto padrão */
+  min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
